@@ -9,6 +9,9 @@ const app = express();
 
 connectDB();
 
+//middleware to parse JSON
+app.use(express.json());
+
 app.use("/api/notes", notesRoutes);
 
 app.listen(5001, () => {
